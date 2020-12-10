@@ -1,0 +1,665 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("/img/bg.png") #251762;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+body header {
+  width: 100%;
+  min-height: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Recoleta';
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  font-size: 30px;
+  color: #ffcfbe;
+}
+
+body header h2 a {
+  margin-left: 20px;
+  color: #fff;
+  background: #ed3f37;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 5px 8px;
+  font-family: 'Avenir';
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body header h2 a:hover {
+  background: #a7231c;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  margin-right: 100px;
+}
+
+body header nav a {
+  position: relative;
+  padding: 8px 15px;
+  color: rgba(255, 255, 255, 0.836);
+  text-decoration: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+body header nav a::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  background: #ed3f37;
+  height: 0.14em;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 20px;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+}
+
+body header nav a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.836);
+  width: 100%;
+}
+
+body main section {
+  width: 80%;
+  padding-right: 20%;
+  min-height: 150px;
+  margin-top: 100px;
+}
+
+body main section h1, body main section h2, body main section h3 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 20px;
+  font-family: 'Recoleta';
+  color: #ffcfbe;
+}
+
+body main section p {
+  font-size: 20px;
+  font-family: 'Avenir';
+  text-align: left;
+  line-height: 30px;
+}
+
+body main section.products h2 {
+  text-align: center;
+  width: 80%;
+}
+
+body main section.products div.images {
+  padding: 0;
+  padding-bottom: 100px;
+}
+
+body main section.products div.images div.img div.overlay a {
+  cursor: pointer;
+}
+
+body main section.products div.images div.img div.overlay a img {
+  width: 20px;
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main section.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main section.product div {
+  width: 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main section.product iframe {
+  width: 40%;
+  height: auto;
+  margin-top: 110px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+body main div.images {
+  width: 80%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main div.images img {
+  vertical-align: top;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 200px;
+}
+
+body main div.images div.img {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+}
+
+body main div.images div.img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body main div.images div.img div.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main div.images div.img div.overlay p {
+  width: 80%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main div.images div.img div.overlay a {
+  color: #fff;
+  background: #ed3f37;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 5px 8px;
+  font-family: 'Avenir';
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body main div.images div.img div.overlay a:hover {
+  background: #a7231c;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body main div.images div.img:hover div.overlay {
+  opacity: 1;
+}
+
+body main div {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+}
+
+body main div h1, body main div h2, body main div h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 20px;
+  font-family: 'Recoleta';
+  color: #ffcfbe;
+}
+
+body main div section {
+  width: 50%;
+  padding: 0;
+}
+
+body main div section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+body main div section form h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.836);
+}
+
+body main div section form h3 i {
+  color: #ed3f37;
+}
+
+body main div section form input {
+  font-family: 'Avenir';
+  width: 80%;
+  height: 3em;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: #fff 1px solid;
+  background: #f2f2f2;
+  color: #000;
+  padding: 3px 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+body main div section form input[name=name], body main div section form input[name=mail] {
+  width: 40%;
+}
+
+body main div section form input[name=name]:focus, body main div section form input[name=mail]:focus {
+  border: #ed3f37 1px solid;
+}
+
+body main div section form input[name=comment]:focus {
+  border: #ed3f37 1px solid;
+}
+
+body main div section form input[type=submit], body main div section form input[type=reset] {
+  width: 20%;
+  background: #ed3f37;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  border: none;
+}
+
+body main div section form input[type=submit]:hover, body main div section form input[type=reset]:hover {
+  background: #a7231c;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+body main div div.images {
+  width: 50%;
+  padding: 0;
+  margin-top: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main div div.images img {
+  vertical-align: top;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+body main div table {
+  margin-top: 50px;
+  width: 50%;
+}
+
+body main div table tr {
+  width: 80%;
+  display: inline-block;
+  border-bottom: #a7231c 2px solid;
+  margin-bottom: 20px;
+  padding: 4px;
+}
+
+body main div table tr th, body main div table tr td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Avenir';
+}
+
+body main div table tr th {
+  font-size: 30px;
+  width: 100%;
+  min-height: 2em;
+}
+
+body main div table tr td {
+  font-size: 20px;
+  width: 100%;
+  min-height: 2em;
+}
+
+body main div table tr td i {
+  color: #ed3f37;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+  body main section div.images {
+    padding-right: 0;
+  }
+  body main section div.images div.img {
+    width: 250px;
+    height: 167px;
+  }
+  body main div div.images img {
+    width: 250px;
+    height: 167px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  body main section.product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main section.product div {
+    width: 100%;
+  }
+  body main section.product iframe {
+    display: inline-block;
+    width: 730px;
+    height: 410px;
+  }
+  body main div.about {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body main section {
+    padding: 0;
+  }
+  body main section.products h2, body main section.products div.images {
+    width: 100%;
+  }
+  body main section.product {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section.product iframe {
+    width: 500px;
+    height: 300px;
+  }
+  body main div.contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main div.contact section {
+    width: 100%;
+  }
+  body main div.contact div.images {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  body main div.about table tr {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body main div.images {
+    width: 100%;
+  }
+  body main div.about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body main div.about table {
+    width: 100%;
+    margin-right: 0;
+  }
+  body main div.about div.images {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 8em;
+  }
+  body header h2, body header nav {
+    height: 50%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body main div.contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body main div.contact div.images {
+    padding-bottom: 0;
+  }
+  body main div.contact section form input[name=name], body main div.contact section form input[name=mail], body main div.contact section form input[name=comment] {
+    width: 100%;
+  }
+  body main div.contact section form div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main div.contact section form div input {
+    width: 100px;
+  }
+  body main section.product iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 339px) {
+  body {
+    background-position: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body::after {
+    content: 'Device not supported';
+    display: inline-block;
+    width: 100%;
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+    text-align: center;
+    font-size: 4em;
+    height: 20%;
+    color: #fff;
+  }
+  body header, body main {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url("/fonts/recoleta/Recoleta-RegularDEMO.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url("/fonts/avenir-lt-pro-cufonfonts/AvenirLTProMedium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=styles.css.map */

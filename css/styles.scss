@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box; margin: 0; padding: 0;
+}
+$p-color : rgba(255, 255, 255, 0.836);
+$h-color: #ffcfbe;
+$red: #ed3f37;
+$dark-red: #a7231c;
+body {
+    background: url('/img/bg.png') #251762;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+@import 'header';
+@import 'main';
+@import 'responsive';
+@font-face {
+    font-family: 'Recoleta';
+    src: url("/fonts/recoleta/Recoleta-RegularDEMO.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url("/fonts/avenir-lt-pro-cufonfonts/AvenirLTProMedium.otf");
+    font-weight: normal;
+    font-style: normal;
+}
